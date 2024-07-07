@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc6phmippx45q"]
+
+[ext_resource type="Texture2D" uid="uid://b2l5ql8336ev7" path="res://addons/TinySwords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_sk1xr"]
+[ext_resource type="Texture2D" uid="uid://c68844nrmxrsg" path="res://addons/TinySwords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_f8s21"]
+[ext_resource type="Texture2D" uid="uid://pppc7wrscisn" path="res://addons/TinySwords/Factions/Knights/Troops/Dead/Dead.png" id="3_gh164"]
+[ext_resource type="PackedScene" uid="uid://btohrxsas03w3" path="res://player/player_events/skills/aura.tscn" id="4_le2xu"]
+[ext_resource type="Texture2D" uid="uid://sh0nxs4obehk" path="res://addons/TinySwords/UI/Banners/Banner_Horizontal.png" id="5_04hg7"]
+
+[node name="TestAssets" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(635, -824)
+texture = ExtResource("1_sk1xr")
+
+[node name="TorchRed" type="Sprite2D" parent="."]
+position = Vector2(1832, 489)
+texture = ExtResource("2_f8s21")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(563, 807)
+texture = ExtResource("3_gh164")
+
+[node name="Aura" parent="." instance=ExtResource("4_le2xu")]
+position = Vector2(-210, -190)
+
+[node name="BannerHorizontal" type="Sprite2D" parent="."]
+position = Vector2(-111, 79)
+texture = ExtResource("5_04hg7")

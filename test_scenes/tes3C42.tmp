@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://ww0kyb8pt20f"]
+
+[ext_resource type="Texture2D" uid="uid://b2l5ql8336ev7" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_bvvev"]
+[ext_resource type="PackedScene" uid="uid://eu7in8gayg3f" path="res://player/player.tscn" id="2_nwj16"]
+[ext_resource type="PackedScene" uid="uid://7t2ounba12wq" path="res://enemies/red_goblin.tscn" id="3_16eok"]
+[ext_resource type="PackedScene" uid="uid://87j2ifpnu3iq" path="res://enemies/red_pawn.tscn" id="4_678br"]
+[ext_resource type="PackedScene" uid="uid://jrvgyd75qrpa" path="res://enemies/events/meat_drop.tscn" id="5_v53e6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fir36"]
+line_spacing = 45.0
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="PlayerAnimationMap" type="Sprite2D" parent="."]
+position = Vector2(1782, 811)
+texture = ExtResource("1_bvvev")
+
+[node name="Idle" type="Label" parent="PlayerAnimationMap"]
+offset_left = 589.0
+offset_top = -705.0
+offset_right = 629.0
+offset_bottom = -682.0
+scale = Vector2(3.04565, 2.80743)
+text = "Idle"
+
+[node name="Lines" type="Label" parent="PlayerAnimationMap"]
+offset_left = -602.0
+offset_top = -704.0
+offset_right = -584.0
+offset_bottom = -205.0
+scale = Vector2(3.04565, 2.80743)
+text = "0 1 2 3 4 5 6 7"
+label_settings = SubResource("LabelSettings_fir36")
+autowrap_mode = 2
+
+[node name="Columns" type="Label" parent="PlayerAnimationMap"]
+offset_left = -514.0
+offset_top = -809.0
+offset_right = -176.0
+offset_bottom = -786.0
+scale = Vector2(3.04565, 2.80743)
+text = "0              1            2              3            4              5"
+
+[node name="Running" type="Label" parent="PlayerAnimationMap"]
+offset_left = 589.0
+offset_top = -515.0
+offset_right = 654.0
+offset_bottom = -492.0
+scale = Vector2(3.04565, 2.80743)
+text = "Running"
+
+[node name="AttackSideA" type="Label" parent="PlayerAnimationMap"]
+offset_left = 575.0
+offset_top = -316.0
+offset_right = 716.0
+offset_bottom = -293.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackSideA"
+
+[node name="AttackSideB" type="Label" parent="PlayerAnimationMap"]
+offset_left = 577.0
+offset_top = -132.0
+offset_right = 718.0
+offset_bottom = -109.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackSideB"
+
+[node name="AttackDownA" type="Label" parent="PlayerAnimationMap"]
+offset_left = 571.0
+offset_top = 65.0
+offset_right = 690.0
+offset_bottom = 88.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackDownA"
+
+[node name="AttackDownB" type="Label" parent="PlayerAnimationMap"]
+offset_left = 585.0
+offset_top = 252.0
+offset_right = 704.0
+offset_bottom = 275.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackDownB"
+
+[node name="AttackUpA" type="Label" parent="PlayerAnimationMap"]
+offset_left = 584.0
+offset_top = 458.0
+offset_right = 673.0
+offset_bottom = 481.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackUpA"
+
+[node name="AttackUpB" type="Label" parent="PlayerAnimationMap"]
+offset_left = 588.0
+offset_top = 634.0
+offset_right = 677.0
+offset_bottom = 657.0
+scale = Vector2(3.04565, 2.80743)
+text = "AttackUpB"
+
+[node name="RedGoblin" parent="." instance=ExtResource("3_16eok")]
+position = Vector2(-151, 93)
+
+[node name="RedPawn" parent="." instance=ExtResource("4_678br")]
+position = Vector2(1305, 460)
+
+[node name="RedGoblin2" parent="." instance=ExtResource("3_16eok")]
+position = Vector2(-201, 296)
+
+[node name="RedGoblin3" parent="." instance=ExtResource("3_16eok")]
+position = Vector2(222, -52)
+
+[node name="RedPawn2" parent="." instance=ExtResource("4_678br")]
+position = Vector2(1251, 399)
+
+[node name="RedPawn3" parent="." instance=ExtResource("4_678br")]
+position = Vector2(563, 736)
+
+[node name="RedPawn4" parent="." instance=ExtResource("4_678br")]
+position = Vector2(981, 734)
+
+[node name="RedPawn5" parent="." instance=ExtResource("4_678br")]
+position = Vector2(1174, 691)
+
+[node name="Player" parent="." instance=ExtResource("2_nwj16")]
+position = Vector2(525, 348)
+
+[node name="MeatDrop" parent="." instance=ExtResource("5_v53e6")]
+position = Vector2(301, 547)
